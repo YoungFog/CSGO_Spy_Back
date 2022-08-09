@@ -12,3 +12,5 @@ You need to edit /src/main/resources/application.yml to Configure Your Database
 Import db_structure with file('csgo_spy.sql')
 <br><br>
 RUN it to add tables
+<br><br>
+(& Table 'name' should have your friends' names in it! FrontEnd can read them as options to join game!)
