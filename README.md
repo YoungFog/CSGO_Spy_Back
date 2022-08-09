@@ -7,3 +7,8 @@ Spent 2 nights just 4 fun
 
 ## How to use
 You need to edit /src/main/resources/application.yml to Configure Your Database
+
+## How to design db
+Import db_structure with file('csgo_spy.sql')
+<br><br>
+RUN it to add tables
