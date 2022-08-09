@@ -5,5 +5,5 @@ You Can visit project on https://csgospy.youngfog.cn/
 <br><br>
 Spent 2 nights just 4 fun
 
-## Way to use
+## How to use
 You need to edit /src/main/resources/application.yml to Configure Your Database
