@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.youngfog.back_csgo_spy.mapper.PlayerMapper">
+    <insert id="addPlayer">
+        insert into player
+        values (null,#{match_id},#{player_id},#{name},#{isSpy},#{hasVoted},#{voted_num})
+    </insert>
+    <update id="updatePlayer">
+        update player
+        set isSpy=#{isSpy},hasVoted=#{hasVoted},voted_num=#{voted_num}
+        where player_id=#{player_id} and match_id=#{match_id}
+    </update>
+    <select id="getPlayerByIds" resultType="com.youngfog.back_csgo_spy.domain.Player">
+        select * from player where player_id=#{player_id} and match_id=#{match_id}
+    </select>
+    <select id="getPlayerByMatch_id" resultType="com.youngfog.back_csgo_spy.domain.Player">
+        select * from player where match_id=#{match_id}
+    </select>
+    <select id="getPlayersByTeamtype" resultType="com.youngfog.back_csgo_spy.domain.Player">
+        select * from player
+                 where player_id like CONCAT('%',#{team_type},'%') and match_id=#{match_id}
+    </select>
+    <select id="getPlayerByName" resultType="com.youngfog.back_csgo_spy.domain.Player">
+        select * from player where match_id=#{match_id} and name=#{name}
+    </select>
+
+</mapper>

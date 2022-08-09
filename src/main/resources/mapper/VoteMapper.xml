@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.youngfog.back_csgo_spy.mapper.VoteMapper">
+    <insert id="addVote">
+        insert into vote values (null,#{match_id},#{name_from},#{name_to})
+    </insert>
+    <select id="findAll" resultType="com.youngfog.back_csgo_spy.domain.Vote">
+        select * from vote
+        where match_id = #{match_id}
+    </select>
+</mapper>

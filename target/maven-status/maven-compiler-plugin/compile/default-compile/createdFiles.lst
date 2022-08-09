@@ -1,0 +1,4 @@
+com\youngfog\back_csgo_spy\domain\MatchInf.class
+com\youngfog\back_csgo_spy\mapper\NameMapper.class
+com\youngfog\back_csgo_spy\controller\GlobalController.class
+com\youngfog\back_csgo_spy\config\CorsConfig.class

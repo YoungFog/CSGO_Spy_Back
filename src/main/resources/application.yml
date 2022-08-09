@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    url: jdbc:mysql://ip:3306/csgo_spy?characterEncoding=utf-8&serverTimezone=UTC
+    username: 
+    password: 
+    driver-class-name: com.mysql.cj.jdbc.Driver
+mybatis:
+  mapper-locations: classpath:mapper/*Mapper.xml
+  type-aliases-package: com.youngfog.back_csgo_spy.domain
